@@ -1,6 +1,4 @@
-const anagrams = (word, words) => {
-  words.filter((el) => el.sort())
-};
+const anagrams = (word, words) => words.filter(el => [...el].sort().join('') === [...word].sort().join(''));
 
 console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']), ['aabb', 'bbaa']);
 console.log(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']), ['carer', 'racer']);
