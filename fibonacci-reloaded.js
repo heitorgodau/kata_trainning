@@ -9,6 +9,17 @@ const fib = (n) => {
   return fibSeq[fibSeq.length - 1];
 };
 
+
+const fib = (n) => {
+  let resA = 0, resB = 1;
+  for (let i = 1; i < n; i += 1) {
+      let tmp = resA;
+      resA = resB;
+      resB += tmp;
+  }
+  return resA;
+}
+
 console.log(fib(8));
 
 /* And here is Fibonacci again. This time we want to go one step further.
